@@ -9,7 +9,7 @@ body {
 
 @layer base {
   body {
-    @apply bg-[#04050a] text-[#caedf0];
+    @apply bg-[#0d0c1d] text-[#a8a4e3];
   }
 }
 

@@ -3,7 +3,7 @@ import { SiTesla, SiVercel, SiHeroku } from "react-icons/si/index.js";
 
 export default function Companies() {
   return (
-    <section className="w-full h-full border-l border-r border-b border-[#1a252a] py-16">
+    <section className="w-full h-full border-l border-r border-b border-border-dark/50 py-16">
       <section className="p-5">
         <p className="text-center lg:w-[40%] mx-auto">
           Companies of all sizes trust Resend to deliver their most important

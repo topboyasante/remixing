@@ -2,13 +2,13 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="w-full h-full border-l border-r border-b border-[#1a252a]">
+    <section className="w-full h-full border-l border-r border-b border-border-dark/50">
       <section className="w-full h-full flex flex-col lg:flex-row items-center">
         {/* Left Side */}
-        <section className="lg:w-[50%] h-full border-r border-[#1a252a] px-8 py-16 relative">
+        <section className="lg:w-[50%] h-full lg:border-r border-b lg:border-b-0 border-border-dark/50 px-8 py-16 relative">
           <div className="absolute z-[-1] bg-primary/20 bottom-0 right-0 w-[200px] h-[200px] rounded-full blur-[100px]"></div>
           <h1 className="text-2xl lg:text-3xl font-semibold">
-            First-class
+            World-class
             <br />
             developer experience
           </h1>
@@ -26,9 +26,9 @@ export default function About() {
         <section className="lg:w-[50%] h-full px-8 py-16 relative">
           <div className="absolute z-[-1] bg-primary/20 bottom-0 right-0 w-[200px] h-[200px] rounded-full blur-[100px]"></div>
           <h1 className="text-2xl lg:text-3xl font-semibold">
-            Beautiful documentation
+            Your app
             <br />
-            that converts users
+            is more than its container
           </h1>
           <p className="my-3">
             Create beautiful templates without having to deal with {`<table> `}
