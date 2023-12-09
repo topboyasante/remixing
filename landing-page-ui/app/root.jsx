@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import stylesheet from "./tailwind.css";
+import Navbar from "./components/navigation/Navbar";
 
 export const links = () => [{ rel: "stylesheet", href: stylesheet }];
 
@@ -20,24 +21,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        {/* Navbar */}
-        <nav className="w-full h-full border-b border-[#1a252a]">
-          <section className="max-w-screen-xl mx-auto p-5 xl:px-0 border-l border-r border-[#1a252a]">
-            <section className="flex justify-between items-center px-3">
-              {/* Left Side */}
-              <section>
-                <p className="font-semibold text-xl">
-                  mails<span className="text-primary">.</span>
-                </p>
-              </section>
-            </section>
-          </section>
-        </nav>
+        <Navbar/>
         {/* Content */}
         <section className="max-w-screen-xl mx-auto px-5 xl:px-0 ">
           <Outlet />
         </section>
-        {/* Footer */}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
