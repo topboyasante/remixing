@@ -19,6 +19,16 @@ const todos = {
     //retrun the new todo
     return newTodo;
   },
+
+  async getOne(id) {
+    return todos.records.find((item) => item.id === id);
+  },
+
+  async update(id, values) {
+    let todo = await todos.getOne(id);
+    const updatedTodo = { ...todo, ...values };
+    return updatedTodo;
+  },
 };
 
 //Exported Functions(Sort of the Repository Pattern in Dotnet):
@@ -30,4 +40,16 @@ export async function createTodo(values) {
 export async function getTodos() {
   let todosList = await todos.getAll();
   return todosList;
+}
+
+export async function updateTodo(id, updates) {
+  const todoToBeUpdated = await todos.getOne(id);
+  if (!todoToBeUpdated) {
+    throw new Error(`No Todo found for ${id}`);
+  }
+  const updatedTodo = await todos.update(id, {
+    ...todoToBeUpdated,
+    ...updates,
+  });
+  return updatedTodo;
 }

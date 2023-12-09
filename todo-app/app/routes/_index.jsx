@@ -14,6 +14,8 @@ export async function action({ request }) {
   return todo;
 }
 
+
+
 export const loader = async () => {
   const todos = await getTodos();
   return json({ todos });
