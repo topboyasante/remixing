@@ -9,7 +9,6 @@ import {
 import stylesheet from "./tailwind.css";
 import Navbar from "./components/navigation/Navbar";
 import { Footer } from "./components/navigation/Footer";
-import stylesheet from "./tailwind.css";
 
 export const links = () => [{ rel: "stylesheet", href: stylesheet }];
 
